@@ -1,0 +1,118 @@
+/********************* reset *********************/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+/********************* 預設值設定與顏色變數 *********************/
+
+
+:root {
+  font-size: 62.5%;
+
+  /********* 自訂義樣式 ********/
+  /* main color */
+  --primary-color: #014d4e;
+
+  --secondary-color: #ff9408;
+
+  --secondary-color-m: #ff94088e;
+
+  --tertiary-color: #017374;
+
+  --tertiary-color-m: #01737498;
+}
+
+body {
+  font-family: 'Baloo Tamma 2', 'Indie Flower', 'cursive';
+  line-height: 1.8;
+  display: flex;
+}
+
+li {
+  list-style: none;
+}
+
+a:visited,
+a:link {
+  color: aliceblue;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+/************************ main styling ***********************/
+
+
+/******** 側邊攔 *********/
+
+aside#side-nav__content {
+  position: sticky;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  background-color: var(--primary-color);
+}
+
+#side-nav__content img {
+  width: calc(3vw + 3vh)
+}
+
+#side-nav__content .side-nave__item2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-basis: 40%;
+  justify-content: space-around;
+}
+
+#side-nav__content .side-nave__item2 a {
+  font-size: calc(10px + 1vw);
+  color: aliceblue;
+  transition: color 0.35s;
+}
+
+#side-nav__content .side-nave__item2 a:hover {
+  color: var(--secondary-color);
+}
+
+
+
+/******** 主要區域 *********/
+
+/***header 部分 ***/
+main {
+  flex: 1;
+}
+
+.header-nav__content {
+  display: flex;
+  background-color: #ff9408;
+  justify-content: end;
+  height: calc(3vh + 3vw);
+}
+
+.header-nav__item {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  width: 100%;
+  justify-content: end;
+}
+
+.header-nav__item li {
+  margin-right: calc(1vw + 5px);
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 10px;
+}
+
+.header-nav__item li a {
+  font-size: calc(1rem + 0.5vw);
+}
